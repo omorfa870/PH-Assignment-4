@@ -1,4 +1,5 @@
-let activeTab = "all";
+
+
 
 const tabAll = document.getElementById("tab-all");
 const tabInterview = document.getElementById("tab-interview");
@@ -141,3 +142,11 @@ document.addEventListener("click", function (e) {
     render();
   }
 });
+
+
+getCards().forEach(card => {
+  setBadge(card, card.dataset.status);
+});
+
+let activeTab = "all";
+setActiveTab("all");
